@@ -21,3 +21,5 @@ class empleado:
         else:
             return self.salario
 
+    def imprimir(self):
+        return self.nombre
