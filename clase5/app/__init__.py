@@ -48,7 +48,6 @@ if __name__ == "__main__":
             elif op == 1:
                 flag2 = True
                 while flag2:
-                    try:
                         print("\nTipo a agregar?\n 1. Ejecutivo\n 2. Empleado\n 3. Atras")
                         op = int(input())
                         if op == 3:
@@ -69,10 +68,6 @@ if __name__ == "__main__":
                             ejecutivos.append(emp)
                         else:
                             print("Esa opcion no existe")
-                    except ValueError:
-                        print("No introdujo un numero")
-                    except:
-                        print("Error")
             else:
                 print("Esa opcion no existe")
         except ValueError:
