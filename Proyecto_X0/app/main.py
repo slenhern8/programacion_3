@@ -1,37 +1,37 @@
+from app.funciones import evalua_ganardor, leer_posicion, IA
 
-def fin_juego(p1, p2, p3, p4, p5, p6, p7, p8, p9):
-    ganador = "no"    # determina si alguno de los jugadores a ganado
-    if p1 == p2 == p3:
-        ganador = p1
-    if p4 == p5 == p6:
-        ganador = p4
-    if p7 == p8 == p9:
-        ganador = p7
-    if p1 == p4 == p7:
-        ganador = p1
-    if p2 == p5 == p8:
-        ganador = p2
-    if p3 == p6 == p9:
-        ganador = p3
-    if p3 == p5 == p7:
-        ganador = p3
-    if p1 == p5 == p9:
-        ganador = p1
-    return ganador
 
 if __name__ == "__main__":
-    p1 = "p1"  # inicializar cada posicion con su nombre para evitar confucion
-    p2 = "p2"
-    p3 = "p3"
-    p4 = "p4"
-    p5 = "p5"
-    p6 = "p6"
-    p7 = "p7"
-    p8 = "p8"
-    p9 = "p9"
+    p = ['a']
+    for i in range(1, 10): #inicializar con datos diferentes
+        p.append(i)
 
-    ganador = fin_juego(p1, p2, p3, p4, p5, p6, p7, p8, p9)
-    if ganador == "x" or ganador == "0":
-        print("Ganador: " + str(ganador))
-    else:
-        print("Siguiente turno")
+    flag = True
+    i=1
+    while flag:
+        if i%2 == 0:   #decide a quien le toca jugar
+            print("\nturno de 0")
+            a = IA(p)
+            p[a] = '0'
+            print(" IA juega en la posicion: "+ str(a))
+        else:
+            print("\nturno de X")
+            p[leer_posicion()] = 'x'
+
+
+
+        ganador = evalua_ganardor(p)
+        if ganador == "x" or ganador == "0":
+            print("Ganador: " + str(ganador))
+            flag = False
+        else:
+            if i == 9:
+                print("Empate")
+            else:
+                print("Siguiente turno")
+
+        if i == 9:  #rompe el ciclo si luego de 9 turnos no hay ganador
+           flag = False
+        i +=1
+
+    print("\n Fin del juego")
