@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promedio de notas</title>
+</head>
+<body>
+    <table border="0">
+        {% for llave, valor in resultado.items() %}
+            <tr>
+                <th> {{ llave }}</th>
+                <td> {{ valor }}</td>
+            </tr>
+        {% endfor %}
+            <tr>
+                <th> Promedio </th>
+                <td>{{ prom }}</td>
+            </tr>
+    </table>
+</body>
+</html>
