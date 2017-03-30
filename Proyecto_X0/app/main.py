@@ -1,7 +1,16 @@
 from app.funciones import evalua_ganardor, leer_posicion, IA
+#from flask import Flask, render_template
 
+#app = Flask(__name__)
+
+#@app.route('/')
+#def inicio():
+#    return render_template('index.html')
 
 if __name__ == "__main__":
+
+    #app.run()
+
     p = ['a']
     for i in range(1, 10): #inicializar con datos diferentes
         p.append(i)
