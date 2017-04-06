@@ -21,8 +21,9 @@ def evalua_ganardor(p):
         ganador = p[1]
     return ganador
 
-def leer_posicion():
-    pos = int(input("posicion: "))
+def leer_posicion(a):
+    pos = random.randint(1, 9)
+    #pos = int(input("posicion: "))
     # aqui hay que hacer la conecion con la parte grafica del juego
     # al hacer clic en la posicion que se desea jugar debe devolver un valor entre 1-9 segun la posicion
     return pos

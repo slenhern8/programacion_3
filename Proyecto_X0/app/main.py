@@ -1,20 +1,24 @@
 from app.funciones import evalua_ganardor, leer_posicion, IA
-#from flask import Flask, render_template
+from flask import Flask, render_template
 
-#app = Flask(__name__)
+app = Flask(__name__)
 
-#@app.route('/')
-#def inicio():
-#    return render_template('index.html')
+
+p = ['a']
+for i in range(1, 10): #inicializar con datos diferentes
+    p.append(i)
+
+@app.route('/')
+def inicio():
+    return render_template('index.html', po = p[9])
 
 if __name__ == "__main__":
 
-    #app.run()
 
-    p = ['a']
-    for i in range(1, 10): #inicializar con datos diferentes
-        p.append(i)
+    app.run()
 
+
+'''
     flag = True
     i=1
     while flag:
@@ -26,9 +30,6 @@ if __name__ == "__main__":
         else:
             print("\nturno de X")
             p[leer_posicion()] = 'x'
-
-
-
         ganador = evalua_ganardor(p)
         if ganador == "x" or ganador == "0":
             print("Ganador: " + str(ganador))
@@ -44,3 +45,4 @@ if __name__ == "__main__":
         i +=1
 
     print("\n Fin del juego")
+'''

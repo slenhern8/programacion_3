@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe</title>
+</head>
+    <p style="text-align: center;"></p>
+    <table style="height: 500px; border-color: #000000; margin-left: auto; margin-right: auto;" border="10" width="500">
+        <caption>&nbsp;</caption>
+<tbody>
+    <tr>
+        <td style="text-align: center;">&nbsp; <button type="submit">Click Me!</button></td>
+        <td style="text-align: center;">&nbsp;<button type="button">Click Me!</button></td>
+        <td style="text-align: center;">&nbsp;<button type="button">Click Me!</button></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">&nbsp;<button type="button">Click Me!</button></td>
+        <td style="text-align: center;">&nbsp;<button type="button">Click Me!</button></td>
+        <td style="text-align: center;">&nbsp;<button type="button">Click Me!</button></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">&nbsp;<button type="button">Click Me!</button></td>
+        <td style="text-align: center;">&nbsp;<button type="button">Click Me!</button></td>
+        <td style="text-align: center;">&nbsp;
+            {% if po == 9 %}
+            <img src="/Proyecto_X0/app/images/X.png" />
+            {% else %}
+            <img src="../images/O.png" />
+            {% endif %}
+        </td>
+    </tr>
+</tbody>
+</table>
+
