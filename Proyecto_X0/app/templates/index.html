@@ -14,8 +14,11 @@
         <caption>&nbsp;</caption>
 <tbody>
     <tr>
-        <td style="text-align: center;">&nbsp;{% if p1 == 1 %} 1
-            <img src="../static/blanco.png" />
+        <td style="text-align: center;">&nbsp;{% if p1 == 1 %}
+            <form method="POST" action="http://localhost:5000/jugada">
+                <input name="posicion" type="image" value="1"
+                src="../static/blanco.png">
+            </form>
             {% else %}
                 {% if p1 == 'x' %}
             <img src="../static/X_2.png" />
@@ -24,8 +27,11 @@
             {% endif %}
             {% endif %}
         </td>
-        <td style="text-align: center;">&nbsp;{% if p2 == 2 %} 2
-            <img src="../static/blanco.png" />
+        <td style="text-align: center;">&nbsp;{% if p2 == 2 %}
+            <form method="POST" action="http://localhost:5000/jugada">
+                <input name="posicion" type="image" value="2"
+                src="../static/blanco.png">
+            </form>
             {% else %}
                 {% if p2 == 'x' %}
             <img src="../static/X_2.png" />
@@ -34,8 +40,11 @@
             {% endif %}
             {% endif %}
         </td>
-        <td style="text-align: center;">&nbsp;{% if p3 == 3 %} 3
-            <img src="../static/blanco.png" />
+        <td style="text-align: center;">&nbsp;{% if p3 == 3 %}
+            <form method="POST" action="http://localhost:5000/jugada">
+                <input name="posicion" type="image" value="3"
+                src="../static/blanco.png">
+            </form>
             {% else %}
                 {% if p3 == 'x' %}
             <img src="../static/X_2.png" />
@@ -46,8 +55,11 @@
         </td>
     </tr>
     <tr>
-        <td style="text-align: center;">&nbsp;{% if p4 == 4 %} 4
-            <img src="../static/blanco.png" />
+        <td style="text-align: center;">&nbsp;{% if p4 == 4 %}
+            <form method="POST" action="http://localhost:5000/jugada">
+                <input name="posicion" type="image" value="4"
+                src="../static/blanco.png">
+            </form>
             {% else %}
                 {% if p4 == 'x' %}
             <img src="../static/X_2.png" />
@@ -56,8 +68,11 @@
             {% endif %}
             {% endif %}
         </td>
-        <td style="text-align: center;">&nbsp;{% if p5 == 5 %} 5
-            <img src="../static/blanco.png" />
+        <td style="text-align: center;">&nbsp;{% if p5 == 5 %}
+            <form method="POST" action="http://localhost:5000/jugada">
+                <input name="posicion" type="image" value="5"
+                src="../static/blanco.png">
+            </form>
             {% else %}
                 {% if p5 == 'x' %}
             <img src="../static/X_2.png" />
@@ -66,8 +81,11 @@
             {% endif %}
             {% endif %}
         </td>
-        <td style="text-align: center;">&nbsp;{% if p6 == 6 %} 6
-            <img src="../static/blanco.png" />
+        <td style="text-align: center;">&nbsp;{% if p6 == 6 %}
+            <form method="POST" action="http://localhost:5000/jugada">
+                <input name="posicion" type="image" value="6"
+                src="../static/blanco.png">
+            </form>
             {% else %}
                 {% if p6 == 'x' %}
             <img src="../static/X_2.png" />
@@ -78,8 +96,11 @@
         </td>
     </tr>
     <tr>
-        <td style="text-align: center;">&nbsp;{% if p7 == 7 %} 7
-            <img src="../static/blanco.png" />
+        <td style="text-align: center;">&nbsp;{% if p7 == 7 %}
+            <form method="POST" action="http://localhost:5000/jugada">
+                <input name="posicion" type="image" value="7"
+                src="../static/blanco.png">
+            </form>
             {% else %}
                 {% if p7 == 'x' %}
             <img src="../static/X_2.png" />
@@ -87,8 +108,11 @@
             <img src="../static/O.png" />
             {% endif %}
             {% endif %}</td>
-        <td style="text-align: center;">&nbsp;{% if p8 == 8 %} 8
-            <img src="../static/blanco.png" />
+        <td style="text-align: center;">&nbsp;{% if p8 == 8 %}
+            <form method="POST" action="http://localhost:5000/jugada">
+                <input name="posicion" type="image" value="8"
+                src="../static/blanco.png">
+            </form>
             {% else %}
                 {% if p8 == 'x' %}
             <img src="../static/X_2.png" />
@@ -96,8 +120,11 @@
             <img src="../static/O.png" />
             {% endif %}
             {% endif %}</td>
-        <td style="text-align: center;">&nbsp; {% if p9 == 9 %} 9
-            <img src="../static/blanco.png" />
+        <td style="text-align: center;">&nbsp; {% if p9 == 9 %}
+            <form method="POST" action="http://localhost:5000/jugada">
+                <input name="posicion" type="image" value="9"
+                src="../static/blanco.png">
+            </form>
             {% else %}
                 {% if p9 == 'x' %}
             <img src="../static/X_2.png" />
@@ -110,7 +137,3 @@
 </tbody>
 </table>
 
-<form action="http://localhost:5000/jugada" method="POST">
-        <p> posicion: <input type="text" name="posicion"/> </p>
-        <p> <input type="submit" VALUE="enviar"></p>
-    </form>
