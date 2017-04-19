@@ -9,9 +9,12 @@ if __name__ == "__main__":
             if op == 1:
                 print(" Hola ")
             elif op == 2:
+                sa=input("A: ")
                 try:
-                    archivo = open("clase4.txt", "w+")
-                    archivo.write("Hola \n")
+                    archivo = open("archiv.csv", "a", newline='')
+                    #archivo.write("Hola \n")
+                    #archivo.write("hola2 \n")
+                    archivo.write("\n" + sa + ", Hola")
                     archivo.close()
                 except FileNotFoundError:
                     print("No existe el archivo")
