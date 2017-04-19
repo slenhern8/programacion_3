@@ -1,3 +1,6 @@
+'''
+Proyecto Final juego TIC TAC TOE (X0)
+'''
 from app.funciones import evalua_ganardor, IA
 from flask import Flask, render_template, request
 
